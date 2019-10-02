@@ -13,7 +13,14 @@ process.stdout.write(JSON.stringify(res))
 
 ## Heap Get
 
-After the heap has been written, successive runs can look up the heap state using the [Dragonchain SDK](https://github.com/dragonchain/dragonchain-sdk-python). We also support an [SDK for javascript](https://github.com/dragonchain/dragonchain-sdk-javascript). Whichever SDK you use, you can perform a heap get with this code:
+After the heap has been written, successive runs can look up the heap state using the Dragonchain SDK. We currently maintain SDKs in [python](https://github.com/dragonchain/dragonchain-sdk-python) and [javascript](https://github.com/dragonchain/dragonchain-sdk-javascript). Whichever SDK you use, you can perform a heap get with the getSmartContractObject method.
+
+```python
+response = client.get_smart_contract_object(key=key)
+if response['ok']:
+    res = json.loads(response['response'])
+    # Do something with the heap response
+```
 
 ```js
 const { response, ok } = await this.client.getSmartContractObject({ key })
