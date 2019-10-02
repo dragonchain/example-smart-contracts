@@ -1,0 +1,15 @@
+{
+  "name": "@dragonchain-dev/state-example",
+  "version": "1.0.0",
+  "description": "demonstrate how to use dragonchain state heap",
+  "main": "state.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dragonchain-sdk": "^4.0.0",
+    "get-stdin": "^7.0.0"
+  }
+}
