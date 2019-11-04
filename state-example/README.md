@@ -38,13 +38,11 @@ This example demonstrates a simple end to end use for the blockchain heap. Keys 
 
 The code as-is runs like so:
 
-Logs outputted by the smart contract are marked with `>` in the example.
-
 ```sh
-dctl t c state-test '{ "method": "add", "key": "banana" }'
->2019/10/02 23:14:35 stderr: obj { banana: 0 }
-dctl t c state-test '{ "method": "get", "key": "banana" }'
->2019/10/02 23:15:38 stderr: obj { banana: 1 }
-dctl t c state-test '{ "method": "get", "key": "banana" }'
->2019/10/02 23:15:38 stderr: obj { banana: 2 }
+$ dctl t c state-test '{ "method": "add", "key": "banana" }'
+2019/10/02 23:14:35 stderr: obj { banana: 0 }
+$ dctl t c state-test '{ "method": "get", "key": "banana" }'
+2019/10/02 23:15:38 stderr: obj { banana: 1 }
+$ dctl t c state-test '{ "method": "get", "key": "banana" }'
+2019/10/02 23:15:38 stderr: obj { banana: 2 }
 ```
